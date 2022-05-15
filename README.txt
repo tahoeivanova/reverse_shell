@@ -1,4 +1,7 @@
 0. Choose IP and port of your server pc, which will listen to connections
+// Specify it in ip_cred.py
+
+0*
 // I use kali linux pc ('uname -a'):
 Linux kali-host 5.15.0-kali3-amd64 #1 SMP Debian 5.15.15-2kali1 (2022-01-31) x86_64 GNU/Linux
 
