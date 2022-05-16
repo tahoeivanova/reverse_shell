@@ -41,7 +41,7 @@ chmod +x server.py
 
 // Specify IP and PORT of your server machine in file ip_cred.py
 
-// Run server.py with python (python2 runs well)
+// Run server.py with python 
 ./server.py
 
 // If you use linux as client, run reverse_shell.py with IP, PORT from ip_cred.py on linux machine: 
