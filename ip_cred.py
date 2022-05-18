@@ -1,4 +1,4 @@
 #! /usr/bin/python
 
 IP = "xxx.xx.x.x" #string
-PORT = 00000 # int
+PORT = 54321 # int
